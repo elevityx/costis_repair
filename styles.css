@@ -1,0 +1,347 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+/* Wrapper for consistent width across all main elements */
+.wrapper {
+    max-width: 1200px; /* Adjust to fit your preferred width */
+    margin: 0 auto; /* Center the wrapper in the viewport */
+    padding: 0 2em; /* Padding within the wrapper to keep some spacing */
+}
+
+/* Header Section */
+header {
+    position: relative;
+    z-index: 1000;
+    background-color: #2a3e5c;
+    color: #ffffff;
+    padding: 5em 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Nav Bar */
+nav {
+    position: relative; /* Initially positioned normally */
+    margin: 10px 0; /* Adjust margin for some space between elements */
+    z-index: 999;
+    background-color: #1e88e5; /* Consistent background color */
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Fixed Nav Bar (Sticky) */
+nav.fixed {
+    position: fixed; /* Changes to fixed position when sticky */
+    top: 0;
+    left: 50%; /* Align to the center of the viewport */
+    transform: translateX(-50%); /* Correct centering of the nav bar */
+    width: calc(100% - 4em); /* Keep width consistent, respecting padding */
+    max-width: 1200px; /* Ensure it doesn't exceed the intended width */
+    background-color: #1e88e5; /* Maintain background color consistency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    border-radius: 15px; /* Keep rounded corners */
+}
+
+/* Nav Links */
+nav a {
+    color: #fff;
+    margin: 0 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #2a3e5c;
+    color: #fff;
+    text-align: center;
+    padding: 5em 2em;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero button {
+    background-color: #ffb400;
+    color: #2a3e5c;
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero button:hover {
+    background-color: #e6a300;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    background-color: #ffffff;
+    padding: 5em 2em;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.services h2 {
+    margin-bottom: 1.5em;
+    font-size: 2.8em;
+    color: #2a3e5c;
+}
+
+.services p {
+    max-width: 800px;
+    margin: 0 auto 2em;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 2.5em;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.service-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h3 {
+    color: #1e88e5;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #e9ecef;
+    padding: 4em 2em;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.testimonial-section h2 {
+    margin-bottom: 1.5em;
+    font-size: 2.8em;
+    color: #2a3e5c;
+}
+
+.testimonial-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3em;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+    font-style: italic;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Active Testimonial */
+.testimonial.active {
+    opacity: 1; /* Show active testimonial */
+}
+
+/* Slide out animation */
+.testimonial.slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Slide in from the right */
+.testimonial.slide-in {
+    transform: translateX(100%);
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    padding: 5em 2em;
+    text-align: center;
+    background-color: #f9f9f9; /* Light neutral color, visually appealing */
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.contact-section h2 {
+    margin-bottom: 1.5em;
+    font-size: 2.8em;
+    color: #2a3e5c; /* Matches the main site theme */
+}
+
+/* Contact Card and Quote Form */
+.contact-card, .quote-form {
+    background-color: #1e88e5; /* Blue color for the cards */
+    padding: 3em;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    color: #ffffff; /* White text for readability on blue background */
+    line-height: 1.6;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.7em;
+    font-weight: bold;
+    color: #ffffff; /* White text for readability on blue background */
+    font-size: 1.1em;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 1.2em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="submit"] {
+    background-color: #ffb400;
+    color: #ffffff;
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e6a300;
+    transform: scale(1.05);
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #2a3e5c;
+    color: #fff;
+    text-align: center;
+    padding: 3em;
+    font-size: 1em;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    header {
+        padding: 2em;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    nav {
+        padding: 0.8em;
+    }
+
+    nav a {
+        margin: 0 0.5em;
+        font-size: 1em;
+    }
+
+    .hero {
+        padding: 4em 1.5em;
+    }
+
+    .hero button {
+        font-size: 1.1em;
+        padding: 1em 2em;
+    }
+
+    .services {
+        padding: 4em 1.5em;
+    }
+
+    .services h2 {
+        font-size: 2.2em;
+    }
+
+    .testimonial-section {
+        padding: 4em 1.5em;
+    }
+
+    .testimonial-section h2 {
+        font-size: 2.2em;
+    }
+
+    .contact-section {
+        padding: 4em 1.5em;
+    }
+
+    .contact-section h2 {
+        font-size: 2.2em;
+    }
+
+    footer {
+        padding: 2em;
+        font-size: 0.9em;
+    }
+}

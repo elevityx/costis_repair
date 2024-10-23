@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Costi's Appliance Repair - Modern Template</title>
+    <meta name="description" content="Certified specialists in home and in-shop appliance repairs serving the Truckee, Lake Tahoe, and surrounding areas.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonials Rotator Logic
+            let testimonials = document.querySelectorAll('.testimonial');
+            let currentIndex = 0;
+            const totalTestimonials = testimonials.length;
+    
+            function showNextTestimonial() {
+                testimonials[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalTestimonials;
+                testimonials[currentIndex].classList.add('active');
+            }
+    
+            // Make the first testimonial visible initially
+            testimonials[currentIndex].classList.add('active');
+    
+            // Set the interval for changing testimonials every 8 seconds
+            setInterval(showNextTestimonial, 8000);
+    
+            // Refactored Sticky Navbar Logic
+            const nav = document.querySelector('nav');
+            const header = document.querySelector('header');
+            const headerBottom = header.getBoundingClientRect().bottom + window.scrollY;
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > headerBottom) {
+                    nav.classList.add('fixed');
+                } else {
+                    nav.classList.remove('fixed');
+                }
+            });
+        });
+    </script>    
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Costi's Appliance Repair</h1>
+            <p>The Electric Doctor</p>
+        </header>
+
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>   
+    </div>
+    <div class="wrapper">
+        <section id="hero" class="hero">
+            <h2>Home and In-shop Appliance Repairs</h2>
+            <p>Proudly serving Truckee, Tahoe Donner, Lahontan, Martis Camp, Old Greenwood, and Glenshire. Reliable, professional service you can count on.</p>
+            <button onclick="document.location='#contact'">Get a Quote</button>
+        </section>
+    </div>
+    <div class="wrapper">
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <p>We service most major appliance brands, including Kenmore, Kitchenaid, Maytag, Whirlpool, LG, and Samsung.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Refrigerator Repair</h3>
+                    <p>Expert repairs for all makes and models. We'll keep your fridge running smoothly.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Washer/Dryer Repair</h3>
+                    <p>Full-service repairs for washers and dryers. Get your laundry routine back on track.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Dishwasher Repair</h3>
+                    <p>Fast, efficient dishwasher repairs to ensure spotless results every time.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Oven Repair</h3>
+                    <p>Comprehensive oven repairs, from electrical issues to temperature accuracy.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Freezer Repair</h3>
+                    <p>Keep your freezer working at its best. We handle all major brands.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Cooktop Repair</h3>
+                    <p>Cooktop repairs for all types and brands, ensuring a seamless cooking experience.</p>
+                </div>
+            </div>
+            <div class="service-benefit">
+                <h2>Why Choose Us?</h2>
+                <p>Costi holds a degree in electrical engineering and has extensive expertise in appliance repair. Trust us for precision diagnostics and expert service on today's modern, computer-based appliances.</p>
+            </div>
+        </section>
+    </div>
+    <div class="wrapper">
+        <section id="testimonials" class="testimonial-section">
+            <h2>Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p>"Costi's Appliance Repair went above and beyond! They responded quickly and had the job done before any other company even got back to me." - D.S. from Oakland, CA</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Incredible customer service! I couldn't be happier with their efficiency and quality. Highly recommend." - J.T. from Tahoe City, CA</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Reliable, professional, and friendly. They are the only appliance repair service I'll use." - L.M. from Reno, NV</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Fast, courteous, and knowledgeable. Five stars isn't enough!" - S.K. from Truckee, CA</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Costi's team provides excellent service, and their expertise shows in every detail. Highly satisfied!" - A.P. from Incline Village, NV</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="wrapper">
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <p><strong>Our Office:</strong><br>
+                    Truckee, CA 96161, USA<br>
+                    Phone: +1.530.386.0428<br>
+                    Email: <a href="mailto:costi@costisappliancerepair.com">costi@costisappliancerepair.com</a></p>
+                    <p>We offer flexible appointment times, including weekends—at no extra cost.</p>
+                </div>
+            </div>
+            <div class="quote-form">
+                <form>
+                    <h3 style="text-align: center; font-size: 2em; color: #2a3e5c; margin-bottom: 1em;">Get a Free Quote</h3>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    
+                    <label for="appliance">Appliance to be Serviced *</label>
+                    <input type="text" id="appliance" name="appliance" placeholder="E.g., Refrigerator, Oven" required>
+                    
+                    <label for="message">Additional Details *</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Provide any relevant details" required></textarea>
+                    
+                    <input type="submit" value="Request Quote">
+                </form>
+            </div>
+        </section>
+    </div>
+
+        <footer>
+            <p>Contact us at <a href="mailto:costi@costisappliancerepair.com">costi@costisappliancerepair.com</a> or call us at +1.530.386.0428</p>
+            <p>&copy; 2024 Costi's Appliance Repair. All rights reserved.</p>
+        </footer>
+   <!-- JavaScript Files -->
+   <script src="ux.js"></script>
+   <script src="form.js"></script>
+</body>
+</html>
